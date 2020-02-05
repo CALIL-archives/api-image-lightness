@@ -18,5 +18,4 @@ api-openurl
 
 運用中のサービス
 ----
-- https://api.calil.jp/openurl?isbn=9784479795902
-- https://asia-northeast1-libmuteki2.cloudfunctions.net/api-openurl?isbn=9784479795902
+- https://asia-northeast1-libmuteki2.cloudfunctions.net/api-image-lightness?isbns=4101001200,4588622102
