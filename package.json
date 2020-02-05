@@ -16,5 +16,7 @@
     "url": "https://github.com/CALIL/api-image-lightness/issues"
   },
   "homepage": "https://github.com/CALIL/api-image-lightness#readme",
-  "dependencies": {}
+  "dependencies": {
+    "canvas": "^2.6.1"
+  }
 }

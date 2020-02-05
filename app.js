@@ -10,7 +10,7 @@
 const {
     createCanvas,
     Image
-} = require('canvas-prebuilt')
+} = require('canvas')
 
 function AverageColorByImage(src) {
     const img = new Image();
