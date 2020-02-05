@@ -15,7 +15,7 @@ const {
 function AverageColorByImage(src) {
     const img = new Image();
     img.src = src;
-    const canvas = createCanvas(200, 200)
+    const canvas = createCanvas()
     const ctx = canvas.getContext('2d');
     return new Promise((resolve, reject) => {
         img.onload = () => {
