@@ -63,7 +63,7 @@ function rgbToHsl(rgb) {
         }
         h /= 6;
     }
-    return [h, s, l];
+    return {H:h, S:s, L:l};
 }
 
 
