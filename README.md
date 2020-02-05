@@ -12,7 +12,7 @@ api-openurl
 
 運用とデプロイ
 ----
-- [Google Cloud Functions](https://console.cloud.google.com/functions/details/asia-northeast1/api-openurl?project=libmuteki2)
+- [Google Cloud Functions](https://console.cloud.google.com/functions/details/asia-northeast1/api-image-lightness?hl=ja&project=libmuteki2&tab=general)
 - [Cloud Source Repositories](https://source.cloud.google.com/libmuteki2/github_calil_api-image-lightness) (Githubと同期)
 - GitHubにプッシュしたあと、Google Cloud Functionsの編集ページからデプロイ
 
