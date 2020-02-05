@@ -69,7 +69,9 @@ function rgbToHsl(rgb) {
 
 exports.imageLightness = (req, res) => {
 
-    const isbns = req.get('isbns').split(',')
+    let isbns = req.query['isbns']
+    if (!isbns) return res.status(200).send('isbnsを指定してください。')
+    isbns = isbns.split(',')
 
     let hsls = []
     isbns.map(async (isbn, i) => {
