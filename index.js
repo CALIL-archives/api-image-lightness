@@ -86,12 +86,12 @@ exports.imageLightness = (req, res) => {
     if (!isbns) return res.status(200).send('isbnsを指定してください。')
     isbns = isbns.split(',')
 
-    let hsls = []
+    let hsls = {}
     isbns.map(async (isbn) => {
         // 書影の平均色を出す
         const rgb = await AverageColorByImage('https://calil.jp/cover/' + isbn)
-        hsls.push(rgbToHsl(rgb))
-        if (isbns.length === hsls.length) {
+        hsls[isbn] = rgbToHsl(rgb)
+        if (isbns.length === Object.keys(hsls).length) {
             res.type('application/json');
             res.set('Access-Control-Allow-Methods', 'GET');
             res.set('Access-Control-Allow-Headers', 'Content-Type');
