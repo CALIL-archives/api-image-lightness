@@ -63,9 +63,22 @@ function rgbToHsl(rgb) {
         }
         h /= 6;
     }
-    return {H:h, S:s, L:l};
+    return {
+        H: h,
+        S: s,
+        L: l,
+        R: r,
+        G: g,
+        B: b,
+        hex: rgb2hex(rgb)
+    };
 }
 
+function rgb2hex(rgb) {
+    return "#" + rgb.map(function (value) {
+        return ("0" + value.toString(16)).slice(-2);
+    }).join("");
+}
 
 exports.imageLightness = (req, res) => {
 
@@ -74,7 +87,7 @@ exports.imageLightness = (req, res) => {
     isbns = isbns.split(',')
 
     let hsls = []
-    isbns.map(async (isbn, i) => {
+    isbns.map(async (isbn) => {
         // 書影の平均色を出す
         const rgb = await AverageColorByImage('https://calil.jp/cover/' + isbn)
         hsls.push(rgbToHsl(rgb))
