@@ -93,6 +93,7 @@ exports.imageLightness = (req, res) => {
         hsls[isbn] = rgbToHsl(rgb)
         if (isbns.length === Object.keys(hsls).length) {
             res.type('application/json');
+            res.set('Access-Control-Allow-Origin', '*');
             res.set('Access-Control-Allow-Methods', 'GET');
             res.set('Access-Control-Allow-Headers', 'Content-Type');
             res.set('Access-Control-Max-Age', '3600');
